@@ -94,14 +94,14 @@ const TodoList = () => {
           placeholder="Task title..."
           value={newTodoTitle}
           onChange={(e) => setNewTodoTitle(e.target.value)}
-          className="w-full rounded-lg border px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+          className="w-full rounded-lg border px-4 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
           disabled={isLoading}
         />
         <textarea
           placeholder="Task description..."
           value={newTodoDescription}
           onChange={(e) => setNewTodoDescription(e.target.value)}
-          className="w-full rounded-lg border px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+          className="w-full rounded-lg border outline-none px-4 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
           disabled={isLoading}
           rows={3}
         />
@@ -156,7 +156,7 @@ const TodoItem = ({
             type="checkbox"
             checked={todo.completed}
             onChange={() => toggleTodo(todo.id, !todo.completed)}
-            className="h-5 w-5 cursor-pointer rounded border-gray-300 text-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+            className="h-5 w-5 cursor-pointer rounded border-gray-300 outline-none text-blue-500 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
           />
           <span
             className={`text-sm font-medium ${
